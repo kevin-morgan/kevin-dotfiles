@@ -1,0 +1,5 @@
+[user]
+	name = Kevin MORGAN
+	email = kevin.morgan@qq.com
+[core]
+	excludesfile = ~/.gitignore_global
