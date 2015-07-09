@@ -9,7 +9,7 @@
 
 if [[ "$OSTYPE" = darwin* ]]; then
   alias dots='st ~/.dots'
-  alias reload='source .zshrc'
+  alias reload='source ~/.zshrc'
 else
   alias dots='cd ~/.dots && vim'
   alias reload='source ~/.bash_profile && echo "sourced ~/.bash_profile"'

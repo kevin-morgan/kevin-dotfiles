@@ -24,6 +24,7 @@ else
   #
 fi
 alias c='clear'
+alias lc='clear && l'
 alias f='find . -iname'
 alias grep='grep -in --color=auto'
 alias m='less'
@@ -37,6 +38,9 @@ alias job='jobs -l'
 # CD UTILITIES
 # ---------------------------------------------------------------------
 
+function cl {
+	builtin cd "$@" && l
+}
 alias .4='cd ../../../../'
 alias .5='cd ../../../../..'
 

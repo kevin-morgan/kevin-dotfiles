@@ -1,8 +1,10 @@
 /*
 
+!.gitignore
 !/git
 !/script
 !/tmux
 !/vim
 !/zsh
-!.gitignore
+!dotfiles.sublime-project
+!dotfiles.sublime-workspace
