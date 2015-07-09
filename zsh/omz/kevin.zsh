@@ -98,7 +98,6 @@ alias showfuncs='typeset'
 # EDITOR
 # ---------------------------------------------------------------------
 
-alias vi='vim'
 alias svi='sudo vi'
 alias edit='vi'
 
