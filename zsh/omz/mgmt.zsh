@@ -8,16 +8,16 @@
 # ---------------------------------------------------------------------
 
 if [[ "$OSTYPE" = darwin* ]]; then
-  alias dots='st ~/.dots'
-  alias reload='source ~/.zshrc'
+  alias dots='st ~/.dotfiles'
+  alias reload='source ~/.zshrc && echo "sourced ~/.zshrc"'
 else
-  alias dots='cd ~/.dots && vim'
-  alias reload='source ~/.bash_profile && echo "sourced ~/.bash_profile"'
+  alias dots='cd ~/.dotfiles && vim'
+  alias reload='source ~/.zshrc && echo "sourced ~/.zshrc"'
 fi
 
 # ---------------------------------------------------------------------
 # HOSTS
 # ---------------------------------------------------------------------
 
-alias hosts='sudo vi /etc/hosts'
+alias vhosts='sudo vi /etc/hosts'
 alias shosts='st /etc/hosts'
