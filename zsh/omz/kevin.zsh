@@ -32,6 +32,10 @@ alias more='less'
 alias job='jobs -l'
 #alias g="grep "
 
+# Ansible aliases.
+alias an='ansible'
+alias ap='ansible-playbook'
+
 
 
 # ---------------------------------------------------------------------
