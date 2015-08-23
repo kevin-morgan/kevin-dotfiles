@@ -1,5 +1,61 @@
 [user]
 	name = Kevin MORGAN
 	email = kevin.morgan@qq.com
+
+[github]
+	user = kevin-morgan
+
+[color]
+	ui = auto
+	interactive = auto
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+
+[color "status"]
+	added = green
+	changed = magenta
+	untracked = bold yellow
+
 [core]
+	editor = vim 
+  autocrlf = input
+  safecrlf = warn
 	excludesfile = ~/.gitignore_global
+
+[diff]
+	tool = vimdiff
+
+[merge]
+	# Include summaries of merged commits in newly created merge commit messages
+	log = true
+	tool = vimdiff
+
+[alias]
+	yolo = 'git commit -am "DEAL WITH IT" && git push -f origin master'
+	hist = "log --graph --pretty=format:'%Cred%h%Creset %d %s %Cgreen(%cr)%Creset %Cblue[%an]%Creset' --abbrev-commit --date=relative"
+	ahead = "log @{u}...HEAD --graph --decorate --left-right --boundary --pretty=format:'%Cred%h%Creset %d %s %Cgreen(%cr)%Creset %Cblue[%an]%Creset' --abbrev-commit --date=relative"
+	today = "log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative"
+	# Show verbose output about tags, branches, or remotes
+	tags = tag -l
+	branches = branch -a
+	remotes = remote -v
+
+[push]
+	# simple is the new default, requires > 1.7
+	# default = simple
+	default = matching
+
+
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
