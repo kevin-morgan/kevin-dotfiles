@@ -54,11 +54,11 @@ ZSH_CUSTOM=~/.dotfiles/zsh/omz
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump brew colored-man cp dircycle git iwhois osx sublime themes)
+plugins=(autojump brew colored-man cp dircycle git iwhois osx sublime themes tmux)
 
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:~/.dots/script:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:~/.dots/script:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh

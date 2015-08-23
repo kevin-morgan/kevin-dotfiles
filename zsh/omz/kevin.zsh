@@ -2,13 +2,15 @@
 # KEVIN'S OMZ V2015.04.03
 # ---------------------------------------------------------------------
 
-
 # ---------------------------------------------------------------------
 # SHORTCUTS
 # CD UTILITIES
 # LIST UTILITIES
 # HISTORY
 # LOG
+# EDITOR
+# PACKAGING
+# TMUX
 # MISC UTILITIES
 # ---------------------------------------------------------------------
 
@@ -37,7 +39,6 @@ alias an='ansible'
 alias ap='ansible-playbook'
 
 
-
 # ---------------------------------------------------------------------
 # CD UTILITIES
 # ---------------------------------------------------------------------
@@ -47,6 +48,8 @@ function cl {
 }
 alias .4='cd ../../../../'
 alias .5='cd ../../../../..'
+alias home='cd ~'
+alias back='cd $OLDPWD'
 
 
 # ---------------------------------------------------------------------
@@ -87,18 +90,6 @@ alias systail='tail -f /var/log/system.log'
 
 
 # ---------------------------------------------------------------------
-# MISC UTILITIES
-# ---------------------------------------------------------------------
-
-alias path='echo -e "${PATH//:/\\n}"'
-alias md='mkdir -pv'
-alias showfuncs='typeset'
-
-# alias fd='find . -type d -name'
-# alias ff='find . -type f -name'
-
-
-# ---------------------------------------------------------------------
 # EDITOR
 # ---------------------------------------------------------------------
 
@@ -110,3 +101,58 @@ if [[ "$OSTYPE" = darwin* ]]; then
 else
   #
 fi
+
+
+# ---------------------------------------------------------------------
+# PACKAGING
+# ---------------------------------------------------------------------
+
+if [[ $OSTYPE == linux-gnu ]]; then
+  
+elif [[ $OSTYPE == darwin* ]]; then
+  
+fi
+if [[ '$OSTYPE' = darwin* ]]; then
+  alias update='brew update'
+  alias install='brew install'
+  alias remove='brew remove'
+  alias upgrade='brew upgrade'
+else
+  alias update='sudo aptitude update'
+  alias install='sudo aptitude install'
+  alias remove='sudo aptitude remove'
+  alias upgrade='sudo aptitude upgrade'
+fi
+
+
+# ---------------------------------------------------------------------
+# TMUX
+# ---------------------------------------------------------------------
+
+alias tmac1='tmux new -s MAC-1'
+alias tmac2='tmux new -s MAC-2'
+alias ts1='tmux new -s SAKURA-1'
+alias ts2='tmux new -s SAKURA-2'
+alias tl1='tmux new -s LINODE-1'
+alias tl2='tmux new -s LINODE-2'
+alias ta1='tmux new -s AWS-1'
+alias ta2='tmux new -s AWS-2'
+
+
+# ---------------------------------------------------------------------
+# MISC UTILITIES
+# ---------------------------------------------------------------------
+
+alias path='echo -e "${PATH//:/\\n}"'
+alias md='mkdir -pv'
+alias showfuncs='typeset'
+
+# alias fd='find . -type d -name'
+# alias ff='find . -type f -name'
+
+# Sorted size
+alias 'dus=du -sckx * | sort -nr'
+
+alias 'bk=cd $OLDPWD'
+
+
