@@ -1,4 +1,42 @@
+" ---------------------------------------------------------------------
+" NAME   : oh-my-vim
+" DATE   : 2015-08-20
+" AUTHOR : Kevin MORGAN
+" MAIL   : kevin.morgan@qq.com
+" ---------------------------------------------------------------------
+
+
+" ---------------------------------------------------------------------
+" SYSTEM DETECTION
+" ---------------------------------------------------------------------
+
+let g:osName = ""
+let g:osDictionary = {"Linux":"linux","Darwin":"mac"}
+if has("unix")
+  let s:uname = system("echo -n $(uname)")
+  let g:osName = !v:shell_error ? g:osDictionary[s:uname] : ""
+endif
+
+
+" ---------------------------------------------------------------------
+" VIM TEMPLATE
+" ---------------------------------------------------------------------
+
+let g:username = "Kevin"
+let g:email    = "kevin.morgan@qq.com"
+
+
+" ---------------------------------------------------------------------
+" BASIC SETTINGS
+" ---------------------------------------------------------------------
+
 syntax enable           " enable syntax highlighting
+syntax on
+
+set nocompatible
+set backspace=2
+
+
 set cursorline          " highlight the current line
 set background=dark     " darker color scheme
 set ruler               " show line number in bar
@@ -8,17 +46,26 @@ set number              " show line numbers
 set showcmd             " show selection metadata
 set showmode            " show INSERT, VISUAL, etc. mode
 set showmatch           " show matching brackets
-set autoindent smartindent  " auto/smart indent
+
+set history=2000        " history : how many lines of history VIM has to remember
+
 set smarttab            " better backspace and tab functionality
 set scrolloff=5         " show at least 5 lines above/below
+
+
+" ---------------------------------------------------------------------
+" FileType
+" ---------------------------------------------------------------------
+
 filetype on             " enable filetype detection
 filetype indent on      " enable filetype-specific indenting
 filetype plugin on      " enable filetype-specific plugins
-colorscheme kevin      " requires kevin.vim to be in ~/.vim/colors
+
+
+colorscheme kevin       " requires kevin.vim to be in ~/.dotfiles/vim/colors
 let g:rehash256 = 1
 
-set nocompatible
-set backspace=2
+
 
 " column-width visual indication
 let &colorcolumn=join(range(81,999),",")
@@ -41,5 +88,18 @@ set showmatch           " show matching bracket
 
 " clipboard
 set clipboard=unnamed   " allow yy, etc. to interact with OS X clipboard
+
+
+" ---------------------------------------------------------------------
+" Global Ignore Files
+" ---------------------------------------------------------------------
+
+set wildignore+=*.png,*.jpg,*.bmp,*.gif  " Binary images  
+set wildignore+=*.pyc                    " Python byte code  
+set wildignore+=*.sw?                    " Vim swap files
+set wildignore+=*.git,*.svn              " Version control tool
+set wildignore+=*.DS_Store               " OSX bullshit
+set wildignore+=*.tar.gz,*.zip,*.rar     " Compressed file
+
 
 
