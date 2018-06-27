@@ -1,33 +1,21 @@
 # REFERENCE: https://github.com/github/gitignore
 
-## OS X ## https://github.com/github/gitignore/blob/master/Global/OSX.gitignore
+# ln -s ~/.dotfiles/git/gitignore_global_mac ~/.gitignore_global
+# git config --global core.excludesfile ~/.gitignore_global
 
-.DS_Store
-.AppleDouble
-.LSOverride
+## Linux ## https://github.com/github/gitignore/blob/master/Global/Linux.gitignore
 
-# Icon must end with two \r
-Icon
+*~
 
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
 
-# Thumbnails
-._*
+# KDE directory preferences
+.directory
 
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
 
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
 
-
-## Espresso ## https://github.com/github/gitignore/blob/master/Global/Espresso.gitignore
-*.esproj

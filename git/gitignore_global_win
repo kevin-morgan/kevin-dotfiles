@@ -1,33 +1,31 @@
 # REFERENCE: https://github.com/github/gitignore
 
-## OS X ## https://github.com/github/gitignore/blob/master/Global/OSX.gitignore
+# ln -s ~/.dotfiles/git/gitignore_global_mac ~/.gitignore_global
+# git config --global core.excludesfile ~/.gitignore_global
 
-.DS_Store
-.AppleDouble
-.LSOverride
+## Windows ## https://github.com/github/gitignore/blob/master/Global/Windows.gitignore
 
-# Icon must end with two \r
-Icon
+# Windows thumbnail cache files
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
 
+# Dump file
+*.stackdump
 
-# Thumbnails
-._*
+# Folder config file
+[Dd]esktop.ini
 
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
 
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
 
+# Windows shortcuts
+*.lnk
 
-## Espresso ## https://github.com/github/gitignore/blob/master/Global/Espresso.gitignore
-*.esproj
