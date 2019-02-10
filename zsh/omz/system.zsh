@@ -111,11 +111,11 @@ alias traceroute="traceroute -I"
 alias whois="whois -h whois-servers.net"
 
 if [[ "$OSTYPE" = darwin* ]]; then
-  alias ports="netstat -a -p tcp"
-  alias pl="lsof -i -P | grep -i 'listen'"
+  alias connections="netstat -a -p tcp"
+  alias ports="lsof -i -P | grep -i 'listen'"
 else
-  alias ports="netstat -tulanp"
-  alias pl="netstat -atp | grep -i 'listen'"
+  alias connections="netstat -tulanp"
+  alias ports="netstat -atp | grep -i 'listen'"
 fi
 
 
