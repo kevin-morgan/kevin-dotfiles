@@ -88,7 +88,7 @@ else
   alias diskinfo="df -HT"
   alias du1="du -c --max-depth=1"
 fi
-alias mount="mount | column -t"
+alias mounted="mount | column -t"
 
 
 # ---------------------------------------------------------------------
