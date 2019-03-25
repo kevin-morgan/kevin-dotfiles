@@ -3,6 +3,7 @@
 /*
 
 !.gitignore
+!.gitmodules
 !/git
 !/script
 !/tmux
