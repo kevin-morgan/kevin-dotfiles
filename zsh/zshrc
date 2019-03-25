@@ -67,7 +67,7 @@ ZSH_CUSTOM=~/.dotfiles/zsh/omz
 plugins=(autojump colored-man cp dircycle fasd git iwhois osx sublime themes tmux zsh-autosuggestions zsh-syntax-highlighting)
 plugins=(
   autojump
-  colored-man
+  colored-man-pages
   cp
   dircycle
   fasd
