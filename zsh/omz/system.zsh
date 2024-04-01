@@ -96,7 +96,7 @@ alias mounted="mount | column -t"
 # ---------------------------------------------------------------------
 
 # IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 if [[ "$OSTYPE" = darwin* ]]; then
   alias ipl="ifconfig | grep -w inet | grep -v 127.0.0.1 | awk '{print $3}' | cut -d ':' -f 2"
 else
