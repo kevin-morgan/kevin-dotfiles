@@ -106,6 +106,7 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+
 
 alias p5="ping -c 5"
 alias pp="prettyping"
+alias nt="nexttrace"
 alias traceroute="traceroute -I"
 
 # Enhanced WHOIS lookups
